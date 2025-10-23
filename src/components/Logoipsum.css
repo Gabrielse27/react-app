@@ -1,0 +1,10 @@
+.logoipsum-image {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoipsum-image img {
+  max-width: 110%;
+  height: auto;
+}

@@ -1,0 +1,43 @@
+ .hero-section {
+  background-color: #12372A;
+  height: 750px;
+  padding: 6rem 0;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 12rem;
+}
+
+.text-side {
+  max-width: 50%;
+}
+.hero-title {
+    font-weight: 700;
+    font-size: 60px;
+    color: #F1FFEA;
+    
+}
+
+.welcome-text {
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.hero-desc {
+  color: #e0e0e0;
+  margin: 0.5rem 0 1rem;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 500px;
+}
+.hero-image {
+    justify-content: space-between;
+    margin-right: 15rem;
+    margin-top: 5rem;
+    
+    
+}

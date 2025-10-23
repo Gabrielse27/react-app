@@ -1,0 +1,46 @@
+ .why-choose-us {
+  background-color: #FAF8EC;
+}
+
+
+.section-title {
+  font-size: 2rem;
+  color: #12372A;
+}
+
+.section-description {
+    margin-left: 0rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.security-icon {
+  width: 58px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.image {
+    margin-left: 5rem;
+    margin-top: 3rem;
+    width: 480px;
+}
+
+.security {
+    color: #12372A;
+}
+.flexible {
+    color: #12372A;
+}
+.clean {
+    color: #12372A;
+}
+.access {
+    color: #12372A;
+}
