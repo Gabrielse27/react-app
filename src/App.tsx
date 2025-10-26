@@ -7,6 +7,8 @@ import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import WhyChooseUs from './components/WhyChooseUs';
 import PricingPlans from './components/PricingPlans';
+import CtaSection from './components/CtaSection';
+import LatestBlogs from './components/LatestBlogs';
 
 
 
@@ -21,6 +23,8 @@ function App() {
       <Testimonials/>
       <WhyChooseUs/>
       <PricingPlans/>
+      <CtaSection/>
+      <LatestBlogs/>
 
       
     </>
