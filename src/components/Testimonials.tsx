@@ -47,7 +47,7 @@ const Testimonials = () => {
       .then(response => response.json())
       .then(data => {
         console.log('Skickad:', data);
-        // Lägg till direkt i listan
+        
         setTestimonials([...testimonials, { id: testimonials.length + 1, ...newTestimonial }]);
         setAuthor('');
         setText('');

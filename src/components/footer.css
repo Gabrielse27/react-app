@@ -1,0 +1,21 @@
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #12372A;
+    color: #ffffff;
+    padding: 1.5rem;
+}
+.footer-rights {
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+.footer-terms {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    
+}

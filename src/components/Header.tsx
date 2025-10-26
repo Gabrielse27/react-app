@@ -20,7 +20,7 @@ const Header = () => {
           <div className="d-flex gap-4 social-icons">
 
             <a
-  href="https://www.facebook.com/dittföretag"
+  href="https://www.facebook.com/StorAid"
   target="_blank"
   rel="noopener noreferrer"
   className="social-icon-link"
