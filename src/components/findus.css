@@ -1,0 +1,160 @@
+
+.findus-section {
+  background-color: #12372A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.findus-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #12372A;; 
+}
+
+
+.findus-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.findus-photo img {
+  width: 80%;
+  max-width: 450px;
+  height: auto;
+}
+
+
+.findus-content {
+  flex: 1;
+  background-color: #a3b8aa; 
+  padding: 50px 60px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 80vh;
+
+}
+
+.findus-text {
+  color: #0e2d22;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-left: 5rem;
+}
+
+.findus-description {
+  color: #0e2d22;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+    margin-left: 5rem;
+}
+
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+  margin-bottom: 30px;
+  
+}
+
+.info-item {
+  display: flex;
+  
+  gap: 15px;
+}
+
+.info-item i {
+  background-color: #0e2d22;
+  color: #f1c30c; 
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+
+}
+.social-line {
+  flex-grow: 5;
+  padding: 1px;
+  background-color: #0e2d22;
+  margin: 0 10px; 
+}
+
+.info-item h4 {
+  margin: 0;
+  color: #0e2d22;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0e2d22;
+}
+
+/* === Sociala medier === */
+.social-section {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.social-section h4 {
+  font-weight: 600;
+  color: #0e2d22;
+  margin: 0;
+}
+
+.social-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #0e2d22;
+  margin: 0 10px;
+}
+
+.social-icons-findus i {
+  
+  background-color: #f1c30c;
+  
+    border-radius: 60%;
+  font-size: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons-findus i:hover {
+  transform: scale(1.5);
+  color: #12372A;
+  
+}
+.fa-phone {
+    place-items: left;
+}
+.phone-area {
+    display: flex;
+    flex-direction: column;
+    margin-right: 13rem;
+}
+.email-area {
+    display: flex;
+    flex-direction: column;
+    margin-right: 11rem;
+}
+.location-area {
+    display: flex;
+    flex-direction: column;
+    margin-right: 6rem;
+}

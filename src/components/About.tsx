@@ -21,7 +21,7 @@ const About = () => {
 
         {/* Textinnehåll */}
         <div className="about-text">
-          <p className="section-tag">About Us</p>
+          <p className="section-tag" >About Us</p>
           <h2 className="about-title">Providing a Safe Space for <br> 
           </br>Your Treasured Items</h2>
            
@@ -40,18 +40,36 @@ const About = () => {
             </div>
           </div>
 
+
+           
+
+
+
           <div className="about-footer">
             <button className="btn btn-warning">Discover More</button>
+
             <div className="contact-info">
-              <i className="bi bi-telephone-fill phone-icon"></i>
-              <div>
+
+
+           <div className="phone-icon">
+              <i className="bi bi-telephone-fill"></i>
+            </div>
+
+
+              <div className="contact-text">
                 <p>More Information</p>
                 <strong>+46 8 123 122 44</strong>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
+           </div> {/* contact-info */}
+
+          
+              
+            </div> {/* about-footer */}
+
+          </div>{/* about-text */}
+
+        </div>  {/* container-about-content*/}
+      
     </section>
   );
 };

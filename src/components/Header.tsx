@@ -1,6 +1,7 @@
 import React from "react";
+import "./header.css";
 import logo from "../assets/Logo-storaid.svg";
-
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -66,29 +67,40 @@ const Header = () => {
             id="navbarNav"
           >
             <ul className="navbar-nav mx-auto d-flex flex-row gap-5">
+
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Home
-                </a>
+                <NavLink className="nav-link" to="/home">
+                Home
+                </NavLink>
+
               </li>
+
+
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About
-                </a>
+                <NavLink className="nav-link" to="aboutus">
+               About Us
+               </NavLink>
+
               </li>
+
+
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Service
-                </a>
+                <NavLink className="nav-link" to="/service">
+                Service
+                </NavLink>
+
               </li>
+
+
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact
-                </a>
+                <NavLink className="nav-link" to="/contact">
+                Contact Us
+                </NavLink>
+
               </li>
               
             </ul>
-            <button className="btn btn-warning btn-top">Book Now</button>
+            <NavLink  className="btn btn-warning btn-top" to="/booking">Book Now</NavLink>
           </div>
         </div>
       </nav>

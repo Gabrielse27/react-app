@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
 
         <div className="hero-image">
-            <img src="/src/assets/bild-hero.svg" alt="Hero image"/>
+            <img src="src/assets/bild-hero.svg" alt="Hero image"/>
           {/* tom om vi använder CSS-bakgrund */}
         </div>
       </div>

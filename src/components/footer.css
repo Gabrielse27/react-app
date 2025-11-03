@@ -17,5 +17,10 @@
     list-style: none;
     margin-right: 5rem;
     margin-top: 2rem;
-    
+}
+.findus-image {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 4rem;
 }

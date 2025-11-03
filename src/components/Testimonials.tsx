@@ -58,7 +58,7 @@ const Testimonials = () => {
   return (
     <section className="testimonials-section">
       <div className="testimonials-text">
-        <p className="section-tag">Testimonials</p>
+        <p className="testimonials-tag">Testimonials</p>
         <h2 className="section-title" style={{ color: "#ffffff"}}>See What Our Clients Say</h2>
         <p className="section-desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisi sed dui lacinia gravida.
