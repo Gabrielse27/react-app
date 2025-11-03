@@ -4,31 +4,41 @@ import './bookingformular.css';
   const BookingFormular = () => {
    return (
 
-    <div className="get-in-touch-container">
+    <div className="booking-container">
 
         
 
-        <div className="get-in-touch-content">
+        <div className="booking-content">
 
             <div className="left-content">
-      <h4 className="first-title">Get in Touch</h4>
-      <h2 className="second-text">Get Personalized Assistance<br />
-       -Contact Us</h2>
+      <h4 className="first-title">Booking Unit</h4>
+      <h2 className="second-text">Booking Your Storage Unit Now<br />
+       & Simplify Your Life!</h2>
+
+<div className="image">
+        <img src="src/assets/whychoose.svg" alt="Storage" className="img-fluid rounded shadow" />
+        </div>
+
+
       
-      <p className="intro-text">If you have any questions or would like to learn more about our services, please don't hesitate to reach out. We're here to help!</p>
+      
 </div>
-     
+     </div>
 
 
      <div className="right-content">
-      <div className="image">
-        <img src="src/assets/whychoose.svg" alt="Storage" className="img-fluid rounded shadow" />
-        </div>
-      </div>
+
+
+<p className="intro-text">If you have any questions or would like to learn more about our services, please don't hesitate to reach out. We're here to help!</p>
+
+      
+      
      </div>
       
 
-      <form className="get-in-touch-form">
+    
+
+      <form className="booking-form">
 
   { /* <div className="form-group">
 
