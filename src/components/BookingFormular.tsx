@@ -25,15 +25,20 @@ import './bookingformular.css';
 </div>
      </div>
 
+       
+          
+    
+
 
      <div className="right-content">
 
+      <div className='formular-text'>
+<p className="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nostrum dolorem, veritatis neque quaerat ab minima eveniet non incidunt reiciendis libero magni! Doloremque culpa eligendi ullam facere ea doloribus iure.</p>
 
-<p className="intro-text">If you have any questions or would like to learn more about our services, please don't hesitate to reach out. We're here to help!</p>
-
+</div>  {/*  div formular-text*/}
       
       
-     </div>
+    
       
 
     
@@ -86,10 +91,20 @@ import './bookingformular.css';
       </div>
 
 
-        <button type="submit">Submit</button>
+        <button type="submit">Book Unit</button>
 
         
       </form>
+
+
+
+
+
+
+
+
+</div> {/*   div right content*/}
+
 </div>
         
     
