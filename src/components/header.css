@@ -1,0 +1,66 @@
+.social-icons {
+  margin-right: 2rem; 
+  
+}
+.btn-top {
+    margin-right: 2rem;
+    margin-top: 1.3rem;
+}
+.topbar-bg{
+    background-color: #12372A;
+}
+
+.social-icons i {
+  font-size: 1.1rem;
+  width: auto;                /* Ta bort fasta mått som orsakar oval form */
+  height: auto;
+  line-height: normal;
+  border: none;               /* Ta bort eventuell ram */
+  background: none;           /* Ingen bakgrundsfärg bakom ikonen */
+  border-radius: 0;           /* Ingen rund form */
+  color: #fbbf24;   
+  display: inline-block;          
+  transition: color 0.3s ease, transform 0.3s ease;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.social-icon-link:hover i {
+  
+ transform: scale(1.6);
+ 
+
+}
+
+
+
+
+
+.nav-link {
+  font-size: 20px;
+  color: #12372A;           
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: #fbbf24 !important; 
+          
+}
+.nav-item {
+    font-weight: 600;
+}
+
+     
+

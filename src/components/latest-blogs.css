@@ -1,0 +1,147 @@
+ 
+/* --- SECTION WRAPPER --- */
+.latest-blogs {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.latest-blogs .container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+.header-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 600;
+  color: #F1C30C;
+  margin-bottom: 0.3rem;
+}
+
+.title {
+  color: #12372A;
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.intro-text {
+  max-width: 560px;
+  color: #12372A;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: -19px;
+}
+
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* --- BLOG CARD --- */
+.blog-card {
+    width: 350px;
+  background-color: #0d3f34;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.blog-image {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  background-color: #C1C1C1;
+  border: 20px solid #0C3B37;
+  border-radius: 25px;
+  display: block;
+  
+}
+
+.blog-image[alt=""] {
+  font-size: 0;
+  color: transparent;
+  text-indent: -9999px;
+}
+
+
+
+/* --- CONTENT --- */
+.blog-content {
+  padding: 1.6rem;
+  color: white;
+}
+
+.date {
+    display: flex;
+    gap: 1rem;
+
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: .5rem;
+  opacity: 0.85;
+}
+
+
+/* Title inside the card */
+.blog-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  line-height: 1.4;
+}
+
+/* Blog text inside card */
+.blog-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin-bottom: 1.2rem;
+}
+
+/* Read more link */
+.read-more {
+  color: #ffc107;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+.read-more:hover {
+  opacity: 3;
+  
+}
+
+/* --- MOBILE RESPONSIVE GRID --- */
+@media (max-width: 1024px) {
+  .blogs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .intro-text {
+    margin: 0 auto;
+  }
+}

@@ -1,60 +1,67 @@
- .about-section {
+
+.about-section {
   padding: 5rem 0;
   background-color: #fefefe;
 }
 
 .about-content {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 3rem;
 }
+
 
 .about-image {
   position: relative;
   flex: 1 1 45%;
-  
 }
 
 .about-image img {
   width: 100%;
-  height: 500px;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
+/* Den mörkgröna rutan */
 .stats-overlay {
   position: absolute;
-  bottom: 1rem;
-  left: 4rem;
-  width: 470px;
-  height: 120px;
+  bottom: -3rem; /* gör att rutan ligger över bilden */
+  left: 2.5rem;
+  width: 80%;
   background-color: #113c30;
   color: #fbbf24;
   display: flex;
-  gap: 2rem;
-  padding: 1rem;
+  justify-content: space-around;
+  padding: 1.5rem;
   border-radius: 8px;
-  position: absolute;
-  top: 80%; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
 .stats-align {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-    
-    
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .stats-overlay div h3 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .stats-overlay div p {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: #eee;
 }
 
+/* -------------------
+   TEXT SECTION
+-------------------- */
 .about-text {
   flex: 1 1 50%;
 }
@@ -62,24 +69,29 @@
 .section-tag {
   color: #fbbf24;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .about-title {
   font-size: 2rem;
   color: #1d3b2a;
   font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
 
 .about-desc {
   color: #1d3b2a;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 16px;
+  line-height: 1.6;
 }
 
+/* Vision + Mission boxes */
 .info-boxes {
   display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
   color: #1d3b2a;
   font-size: 18px;
 }
@@ -87,42 +99,72 @@
 .info-box {
   flex: 1;
   border: 3px solid #ccc;
-  padding: 1rem;
-  border-radius: 6px;
-  
-  
-}
-
-.info-box.right {
-  border: 3px solid #ccc;
-
+  padding: 1.2rem;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
 }
 
 .info-box:hover {
-  border-color: #facc15; 
+  border-color: #fbbf24;
 }
 
-
-.about-footer {
+/* Knapp + kontakt i rad */
+.about-section .about-footer {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  margin-top: 3rem;
 }
 
-.phone-icon {
+
+.about-section .contact-info{
+  display: flex;
+  flex-direction: row;      /* ikon vänster, text höger */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: nowrap;        
+}
+
+/* Ikonen */
+.about-section .phone-icon {
   background-color: #0f3d35;
   color: #fbbf24;
-  padding: 0.75rem;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex-shrink: 0;          
 }
-.contact-info {
+
+.about-section .phone-icon i {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Text till höger om ikonen */
+.about-section .contact-text {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.about-section .contact-text p {
+  margin: 0;
+  color: #1d3b2a;
+  font-size: 0.9rem;
+}
+
+.about-section .contact-text strong {
+  margin: 0;
+  color: #0f3d35;
+  font-size: 1.1rem;
+}
+.btn-warning {
+  margin-bottom: 1.7rem;
 }

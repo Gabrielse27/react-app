@@ -5,9 +5,11 @@
   background-color: #f9fbfa;
   text-align: cente
 }
-.section-tag {
+.price-tag {
+    color: #f9c80e;
     font-size: 20px;
     margin-left: 14rem;
+    font-weight: 600;
 }
 
 .pricing-title {

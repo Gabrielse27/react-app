@@ -1,29 +1,40 @@
- import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Logoipsum from './components/Logoipsum';
-import Services from './components/Services';
-import Testimonials from './components/Testimonials';
-import WhyChooseUs from './components/WhyChooseUs';
-import PricingPlans from './components/PricingPlans';
+ import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Home from './views/Home'
+import AboutUs from './views/AboutUs'
+import Service from './views/Service'
+import Contact from './views/Contact';
+import Booking from './views/Booking';
+import NotFound from "./views/NotFound";
+import BookingFormular from "./components/BookingFormular";
+import ScrollToTop from "./components/ScrollToTop";
+
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <About/>
-      <Logoipsum/>
-      <Services/>
-      <Testimonials/>
-      <WhyChooseUs/>
-      <PricingPlans/>
-
+    <BrowserRouter>
+    <ScrollToTop />
+     <Header></Header>
+    <main>
+     <Routes>
+      <Route path= "/home" element={<Home />} />
+      <Route path="/aboutus" element={<AboutUs />} />
+      <Route path ="/service" element={<Service />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/booking" element={<Booking />} />
+      <Route path="*" element={<NotFound />} />
+      <Route path="/booking" element={<BookingFormular />} />
       
-    </>
+     </Routes>
+     </main> 
+     <Footer></Footer>
+    </BrowserRouter>
   );
 }
 

@@ -19,6 +19,7 @@
   color: #fbbf24;
   font-weight: 500;
   margin-bottom: 10px;
+
 }
 
 .services-text h2 {
@@ -59,7 +60,7 @@
 }
 
 .service-card:hover {
-  border-color: #e6ac00;
+  border-color: #F1C30C;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.06);
 }
 
