@@ -1,5 +1,6 @@
  import React from 'react'
  import '@fortawesome/fontawesome-free/css/all.min.css';
+
  import './findus.css'
  
   const FindUs = () => {
@@ -68,9 +69,28 @@
             <h4>Our Social Media</h4>
             <div className="social-line"></div>
             <div className="social-icons-findus">
-              <i className="fa-brands fa-facebook-f"></i>
+
+                <a
+  href="https://www.facebook.com/StorAid"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="social-link"
+>
+  <i className="fa-brands fa-facebook-f"></i>
+</a>
+
+
+              
+
+
               <i className="fa-brands fa-x-twitter"></i>
+
+              <a href="https://www.instagram.com/StorAid" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fa-brands fa-instagram"></i>
+              </a>
+
+
+
               <i className="fa-brands fa-youtube"></i>
             </div>
           </div>

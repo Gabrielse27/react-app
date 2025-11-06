@@ -31,9 +31,17 @@ const Header = () => {
 
   
 
-            <a href="#" className="text-warning"><i className="bi bi-twitter"></i></a>
-            <a href="#" className="text-warning"><i className="bi bi-instagram"></i></a>
-            <a href="#" className="text-warning"><i className="bi bi-youtube"></i></a>
+            <a href="https://www.twitter.com/StorAid" target="blank"rel="noopener noreferrer"
+            className="social-icon-link"><i className="bi bi-twitter"></i>
+            </a>
+
+
+            <a href="https://www.instagram.com/StorAid" target="blank"rel="noopener noreferrer"
+             className="social-icon-link"><i className="bi bi-instagram"></i></a>
+
+
+            <a href="https://www.youtube.com/StorAid" target="blank"rel="noopener noreferrer"
+             className="social-icon-link"><i className="bi bi-youtube"></i></a>
 
             
                 

@@ -8,6 +8,7 @@
  margin-bottom: 1rem;
  align-items: flex-start;
  justify-content: space-between;
+ margin-right: 6rem;
  
   
  
@@ -85,7 +86,7 @@
   transition: transform 0.3s;
 }
 .faq-item.active .faq-icon {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
   color: #fff; 
 }
   

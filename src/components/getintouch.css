@@ -107,6 +107,7 @@
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .form-group .required {
@@ -134,7 +135,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
   
 }
 
@@ -150,5 +151,19 @@
   color: #F1C30C; 
   opacity: 0.7;
   
+}
 
+.input-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start; /* Viktig! hindrar hopp */
+}
+
+/* Gör att felmeddelandet inte trycker ner layouten */
+.error {
+  position: relative;
+  bottom: -8px; /* flytta texten under fältet */
+  left: 0;
+  color: #d93025;
+  font-size: 0.9rem;
 }

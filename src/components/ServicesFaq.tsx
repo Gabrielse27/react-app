@@ -1,10 +1,11 @@
- import React, { useState, useEffect } from "react";
- import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./services-faq.css";
 
-    interface FaqItem {
-  question: string;
-  answer: string;
+interface FaqItem {
+  id: number;
+  title: string;
+  description: string;
 }
 
 const ServicesFaq: React.FC = () => {
@@ -13,19 +14,20 @@ const ServicesFaq: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // 🔹 Hämta FAQ från API
+  // 🟢 Hämta FAQ från Swagger API
   useEffect(() => {
     const fetchFaqData = async () => {
       try {
-        // ⚠️ Ändra denna URL till ditt riktiga API-endpoint
-        const response = await fetch("/faqs.json");
+        const response = await fetch(
+          "https://win25-jsf-assignment.azurewebsites.net/api/faqs"
+        );
 
         if (!response.ok) {
           throw new Error("Något gick fel vid hämtningen av FAQ-data");
         }
 
         const data = await response.json();
-        setFaqData(data); // sparar frågorna i state
+        setFaqData(data);
       } catch (err: any) {
         setError(err.message);
       } finally {
@@ -60,42 +62,34 @@ const ServicesFaq: React.FC = () => {
     );
   }
 
-
-
-
-
-
-
   return (
     <section className="faq-section">
       <div className="faq-area">
         <div className="faq-content">
-            <h4 className="faq-text">FAQs</h4>
-
-        <h2 className="faq-title">Frequently Asked Questions</h2>
-
-      <div className="faq-ingress">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec<br>
-      </br> ullamcorper mattis, pulvinar dapibus leo.
-
-     </div>
-      
-     </div>
+          <h4 className="faq-text">FAQs</h4>
+          <h2 className="faq-title">Frequently Asked Questions</h2>
+          <div className="faq-ingress">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec<br>
+            </br> ullamcorper mattis, pulvinar dapibus leo.
+          </div>
+        </div>
 
         <div className="faq-accordion">
           {faqData.map((item, index) => (
             <div
-              key={index}
+              key={item.id}
               className={`faq-item ${activeIndex === index ? "active" : ""}`}
               onClick={() => toggleAccordion(index)}
             >
               <div className="faq-question">
-                <p>{item.question}</p>
+                <p>{item.title}</p>
                 <span className="faq-icon">
                   {activeIndex === index ? (
-  <FaChevronUp className="faq-icon" />
-) : (
-  <FaChevronDown className="faq-icon" />
-)}
+                    <FaChevronUp />
+                  ) : (
+                    <FaChevronDown />
+                  )}
                 </span>
               </div>
 
@@ -106,7 +100,7 @@ const ServicesFaq: React.FC = () => {
                   opacity: activeIndex === index ? "1" : "0",
                 }}
               >
-                <p>{item.answer}</p>
+                <p>{item.description}</p>
               </div>
             </div>
           ))}

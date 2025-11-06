@@ -1,8 +1,10 @@
 .social-icons {
   margin-right: 2rem; 
+  
 }
 .btn-top {
     margin-right: 2rem;
+    margin-top: 1.3rem;
 }
 .topbar-bg{
     background-color: #12372A;
@@ -16,8 +18,10 @@
   border: none;               /* Ta bort eventuell ram */
   background: none;           /* Ingen bakgrundsfärg bakom ikonen */
   border-radius: 0;           /* Ingen rund form */
-  color: #fbbf24;             
+  color: #fbbf24;   
+  display: inline-block;          
   transition: color 0.3s ease, transform 0.3s ease;
+  
 }
 
 
@@ -32,28 +36,14 @@
 
 
 .social-icon-link:hover i {
-  color: #8052f2;
-  transform: translateY(-2px);
+  
+ transform: scale(1.6);
+ 
+
 }
 
 
-/*.nav-link {
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 500 !important;
-    
-}
-.nav-link[aria-current="page"] {
-    color: blue;
-}
 
-.nav-link:hover,
-.nav-link:focus-visible {
-    color: #fbbf24;
-    
-    
-    
-}  */
 
 
 .nav-link {
@@ -65,7 +55,8 @@
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: #fbbf24 !important;           
+  color: #fbbf24 !important; 
+          
 }
 .nav-item {
     font-weight: 600;

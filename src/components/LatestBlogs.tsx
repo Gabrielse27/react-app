@@ -11,36 +11,27 @@ interface BlogItem {
 
 export default function LatestBlogs() {
   const [blogs, setBlogs] = useState<BlogItem[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // ⛔ API is down: using fallback data
-    const mockBlogs: BlogItem[] = [
-      {
-        id: "1",
-        title: "Safe and Secure: The Importance of Choosing the Right Storage ",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        created: "August 17,2025",
-        imageUrl: "https://via.placeholder.com/400x250?text=Blog+1",
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(
+          "https://win25-jsf-assignment.azurewebsites.net/api/blogs"
+        );
 
-      },
-      {
-        id: "2",
-        title: "Storage Trends 2024: Whats New in the World of Storage",
-        description: "Mauris ac blandit nisi non sodales augue anid duso avinte...",
-        created: "July 12,2025",
-        imageUrl: "https://via.placeholder.com/400x250?text=Blog+2",
-      },
-      {
-        id: "3",
-        title: "Free Upp Your Space,Free Upp Your Life: The Power of Decluttering",
-        description: "Quisque molestie nisl sed dui lacinia gravida...",
-        created: "April 8,2025",
-        imageUrl: "https://via.placeholder.com/400x250?text=Blog+3",
-      },
-    ];
+        if (!res.ok) throw new Error("Något gick fel vid hämtning");
 
-    setBlogs(mockBlogs);
+        const data = await res.json();
+        setBlogs(data);
+        console.log("✅ Hämtade bloggar:", data);
+      } catch (err) {
+        console.error("❌ Fel vid hämtning:", err);
+        setError("Kunde inte hämta bloggar från API:t.");
+      }
+    };
+
+    fetchBlogs();
   }, []);
 
   return (
@@ -59,43 +50,54 @@ export default function LatestBlogs() {
           </p>
         </div>
 
-        <div className="blogs-grid">
-          {blogs.slice(0, 3).map((blog) => (
-            <div className="blog-card" key={blog.id}>
+        {error ? (
+          <p style={{ color: "red", textAlign: "center" }}>{error}</p>
+        ) : blogs.length === 0 ? (
+          <p style={{ textAlign: "center", color: "#12372A" }}>Loading blogs...</p>
+        ) : (
+          <div className="blogs-grid">
+            {blogs.slice(0, 3).map((blog) => (
+              <div className="blog-card" key={blog.id}>
+                <img
+                  className="blog-image"
+                  src={blog.imageUrl}
+                  alt={blog.title}
+                  onError={(e) => {
+                    e.currentTarget.src =
+                      "https://via.placeholder.com/400x250?text=No+Image";
+                  }}
+                />
 
-            <img
-  className="blog-image"
-  src={blog.imageUrl}
-  alt=""
-  onError={(e) => {
-    e.currentTarget.src = "https://via.placeholder.com/400x250?text=Image";
-  }}
-/>  
-          
+                <div className="blog-content">
+                  <p className="date">
+                    <img
+                      className="date-icon"
+                      src="src/assets/Icon-calendar.png"
+                      alt="date-icon"
+                    />
+                    {new Date(blog.created).toLocaleDateString("sv-SE", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </p>
 
-              <div className="blog-content">
-                
-                <p className="date">
-                    <img className="date-icon" src="src/assets/Icon-calendar.png" alt="date-icon"/>
-                  {new Date(blog.created).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+                  <h3 className="blog-title">{blog.title}</h3>
 
-                </p>
+                  <p className="blog-text">
+                    {blog.description.length > 100
+                      ? blog.description.slice(0, 100) + "..."
+                      : blog.description}
+                  </p>
 
-                <h3 className="blog-title">{blog.title}</h3>
-
-                <p className="blog-text">{blog.description}</p>
-
-                <a className="read-more" href="#">
-                  Read more →
-                </a>
+                  <a className="read-more" href="#">
+                    Read more →
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
