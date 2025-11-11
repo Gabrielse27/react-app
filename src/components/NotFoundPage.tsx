@@ -1,7 +1,17 @@
  import React from "react";
+ import { useNavigate } from "react-router-dom"
  import "./notfound-page.css"
  
  export default function NotFound() {
+
+    const navigate = useNavigate();
+    
+    const handleDiscoverClick = () => {
+      navigate("/home");
+    };
+
+
+
    return (
      <div className="notfound-container">
        <div className="notfound-content">
@@ -11,9 +21,9 @@
            Sorry, the page you are looking for does not exist. It may have been
            moved, removed altogether, or is temporarily unavailable.
          </p>
-         <a href="/" className="back-home-btn">
+         <button className="back-home-btn" onClick={ handleDiscoverClick }>
            Back To Home
-         </a>
+         </button>
        </div>
      </div>
    );

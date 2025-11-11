@@ -19,7 +19,7 @@
     max-width: 650px;
     margin: 0 auto; 
 }
-.cta-button {
+.cta-button  {
   background-color: #facc15;
   color: #000;
   padding: 12px 28px;
@@ -30,4 +30,9 @@
   margin-top: 25px;
   transition: 0.2s ease-in-out;
   text-align: center;
+}
+.cta-button:hover {
+  background-color: #c89a01;
+  transform: scale(1.05);   
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
 }

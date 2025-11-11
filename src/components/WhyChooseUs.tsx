@@ -7,7 +7,7 @@ const WhyChooseUs = () => {
  
  <section className="why-choose-us py-5">
   <div className="container">
-    <div className="row align-items-start">
+    <div className="row align-items-start ml-5">
 
       {/* Vänsterkolumn: Titel + Ikoner */}
       <div className="col-lg-6">

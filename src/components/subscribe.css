@@ -40,7 +40,7 @@
 }
 
 .subscribe-form button {
-  background-color: #e6c100;
+  background-color: #f9d005;
   height: 3rem;
   border: none;
   padding: 0.9rem 1.7rem;
@@ -58,7 +58,8 @@
 
 
 .subscribe-form button:hover {
-  background-color: #d3b100;
+  background-color: #d5b206;
+  transform: scale(1.05);
 }
 
 .message {

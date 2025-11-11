@@ -6,6 +6,7 @@
 .section-title {
   font-size: 2rem;
   color: #12372A;
+  text-align: center;
 }
 
 .section-description {
@@ -15,6 +16,7 @@
 .subtitle {
   font-size: 1rem;
   letter-spacing: 0.5px;
+  margin-left: 7.6rem;
 }
 
 .security-icon {
@@ -34,13 +36,26 @@
 
 .security {
     color: #12372A;
+    text-align: start;
 }
 .flexible {
     color: #12372A;
+    text-align: start;
+
 }
 .clean {
     color: #12372A;
+    text-align: start;
 }
 .access {
     color: #12372A;
+    text-align: start;
+}
+.feat-list {
+  align-items: center;
+
+}
+.why-choose-us .feature {
+  justify-content: center; /* centrerar ikon + text i mitten */
+  text-align: center;
 }
