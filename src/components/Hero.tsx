@@ -1,8 +1,19 @@
  import React from 'react';
+import { useNavigate } from "react-router-dom";
+
 import './Hero.css';
  
 
 const Hero = () => {
+
+const navigate = useNavigate();
+
+const handleDiscoverClick = () => {
+  navigate("/does-not-exist");
+};
+
+
+
   return (
     <section className="hero-section">
       <div className="container hero-content d-flex">
@@ -11,8 +22,12 @@ const Hero = () => {
           <h1 className="hero-title">Space Simplified,
            Storage Perfected</h1>
           <p className="hero-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci nulla explicabo eos beatae iusto nisi laudantium ipsum, suscipit quia blanditiis soluta aliquid minima quod hic.</p>
-          <button className="btn btn-warning">Discover More</button>
+          <button className="btn-discover" onClick={ handleDiscoverClick }>Discover More</button>
         </div>
+
+        
+
+
 
         <div className="hero-image">
             <img src="src/assets/bild-hero.svg" alt="Hero image"/>

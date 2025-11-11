@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./bookingformular.css";
+
 
 const BookingFormular = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +19,7 @@ const BookingFormular = () => {
     setErrors({ ...errors, [name]: "" }); // tar bort felmeddelandet vid ny inmatning
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     let newErrors: { [key: string]: string } = {};
@@ -35,9 +37,30 @@ const BookingFormular = () => {
       return;
     }
 
+
+try {
+    const response = await axios.post("https://win25-jsf-assignment.azurewebsites.net/api/booking", {
+      headers: { "Content-Type": "application/json" },
+
+      name: formData.name,
+      email: formData.email,
+      selectedUnit: formData.unit,
+      purpose: formData.purpose,
+    }
+);
+
     console.log("✅ Booking data sent:", formData);
-   /* alert("Booking submitted successfully Sent!");*/
+   alert("Booking submitted successfully Sent!");
+
     setFormData({ name: "", email: "", unit: "", purpose: "" });
+    
+
+} catch (error) {
+    console.error("❌ Error sending booking:", error);
+    
+  }
+
+
   };
 
   return (

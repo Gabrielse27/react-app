@@ -5,12 +5,13 @@
   background-color: #ffffff;
 }
 
-.latest-blogs .container {
+.latest-blogs .container  {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+   
 
 .header-row {
   display: grid;
@@ -58,6 +59,9 @@
   display: flex;
   flex-direction: column;
 }
+.blog-card :hover {
+    color: #f2f2ee;
+}
 .blog-image {
   width: 100%;
   height: 270px;
@@ -66,8 +70,9 @@
   border: 20px solid #0C3B37;
   border-radius: 25px;
   display: block;
-  
 }
+
+
 
 .blog-image[alt=""] {
   font-size: 0;
@@ -144,4 +149,9 @@
   .intro-text {
     margin: 0 auto;
   }
+}
+.blog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #145646; /* lite ljusare grön vid hover */
 }

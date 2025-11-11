@@ -25,23 +25,24 @@ const Header = () => {
   target="_blank"
   rel="noopener noreferrer"
   className="social-icon-link"
+  aria-label="Besök StorAid på Facebook"
 >
-  <i className="bi bi-facebook"></i>
+  <i className="bi bi-facebook" aria-hidden="true"></i>
 </a>
 
   
 
             <a href="https://www.twitter.com/StorAid" target="blank"rel="noopener noreferrer"
-            className="social-icon-link"><i className="bi bi-twitter"></i>
+            className="social-icon-link" aria-label="Följ StorAid på Twitter"><i className="bi bi-twitter" aria-hidden="true"></i>
             </a>
 
 
             <a href="https://www.instagram.com/StorAid" target="blank"rel="noopener noreferrer"
-             className="social-icon-link"><i className="bi bi-instagram"></i></a>
+             className="social-icon-link" aria-label="Följ StorAid på Instagram"><i className="bi bi-instagram" aria-hidden="true"></i></a>
 
 
             <a href="https://www.youtube.com/StorAid" target="blank"rel="noopener noreferrer"
-             className="social-icon-link"><i className="bi bi-youtube"></i></a>
+             className="social-icon-link" aria-label="Följ StorAid på YouTube"><i className="bi bi-youtube" aria-hidden="true"></i></a>
 
             
                 
@@ -55,9 +56,9 @@ const Header = () => {
 
       <nav className="navbar navbar-expand-lg bg-white shadow-sm">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/home">
   <img src={logo} alt="StorAid Logo" height="40" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -77,31 +78,41 @@ const Header = () => {
             <ul className="navbar-nav mx-auto d-flex flex-row gap-5">
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/home">
+
+                <NavLink
+                 to="/home"
+  className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link")}
+                >
                 Home
                 </NavLink>
-
               </li>
 
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="aboutus">
+                <NavLink 
+to="/aboutus"
+  className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link")}     
+                >
                About Us
                </NavLink>
-
-              </li>
-
+              </li>  
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/service">
+                <NavLink
+to="/service"
+  className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link")}
+                 >
                 Service
                 </NavLink>
-
               </li>
 
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
+                <NavLink 
+to="/contact"
+  className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link")}
+                
+                >
                 Contact Us
                 </NavLink>
 

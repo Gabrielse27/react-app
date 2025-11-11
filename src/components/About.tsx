@@ -1,7 +1,16 @@
  import React from 'react';
+ import { useNavigate } from 'react-router-dom';
 import './About.css';
 
 const About = () => {
+
+const navigate = useNavigate();
+
+const handleDiscoverClick = () => {
+  navigate("/does-not-exist");
+};
+
+
   return (
     <section className="about-section">
       <div className="container about-content">
@@ -46,7 +55,9 @@ const About = () => {
 
 
           <div className="about-footer">
-            <button className="btn btn-warning">Discover More</button>
+            <button className="btn-discover-more" onClick={
+              handleDiscoverClick
+            }>Discover More</button>
 
             <div className="contact-info">
 

@@ -95,6 +95,19 @@ background-image: url('public/photo-testimo.png');
   text-align: left;
   position: relative;
 }
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+}
+.testimonial-card:hover .quote {
+  color: #ffcc00;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+
 
 .stars {
   color: #0e3c34;

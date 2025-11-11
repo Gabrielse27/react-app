@@ -42,3 +42,13 @@
     
     
 }
+.btn-discover {
+  background-color: #fbbf24;
+  width: 30%;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.btn-discover:hover{
+  background-color: #c5951b;
+  transform: scale(1.03);
+}
