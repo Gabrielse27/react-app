@@ -12,7 +12,7 @@ const handleDiscoverClick = () => {
 
 
   return (
-    <section className="about-section">
+    <section className="about-section" aria-label="Om StorAid, information om företaget">
       <div className="container about-content">
         {/* Vänster bild + statistik */}
         <div className="about-image">
@@ -57,19 +57,21 @@ const handleDiscoverClick = () => {
           <div className="about-footer">
             <button className="btn-discover-more" onClick={
               handleDiscoverClick
-            }>Discover More</button>
+            } aria-label="Läs mer om StorAids tjänster och erbjudanden">Discover More</button>
 
             <div className="contact-info">
 
 
            <div className="phone-icon">
-              <i className="bi bi-telephone-fill"></i>
+              <i className="bi bi-telephone-fill" aria-hidden="true"></i>
             </div>
 
 
               <div className="contact-text">
+   <a href="tel:+46812312244" className="contact-text" aria-label="Ring oss på telefonnummer 08 123 122 44">
                 <p>More Information</p>
                 <strong>+46 8 123 122 44</strong>
+   </a>
             </div>
            </div> {/* contact-info */}
 

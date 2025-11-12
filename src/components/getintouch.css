@@ -30,12 +30,12 @@ flex-direction: column;
 }
 
 
-.first-title {
-  color: #f1c30c;
-  font-size: 20px;
+.first-title-getintouch {
+  color: #F1C30C;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
-  margin-left: 9rem;
+  
 }
 .second-text {
     color: #12372A;
@@ -100,7 +100,7 @@ flex-direction: column;
 }
 
 .get-in-touch-form button:hover {
-  background-color: #e7e009;
+  background-color: #4bea95;
   transform: scale(1.05);
 }
 

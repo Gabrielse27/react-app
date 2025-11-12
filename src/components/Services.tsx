@@ -5,12 +5,12 @@ import serviceImage from "../assets/services.svg"
 
 const Services = () => {
   return (
-    <section className="services-section">
+    <section className="services-section" aria-labelledby="services-heading">
       <div className="services-text">
         <div className="services-left">
 
-        <p className="section-tag">Our Services</p>
-        <h2>Specialized Storage for<br>
+        <p className="section-tag-services">Our Services</p>
+        <h2 id="services-heading">Specialized Storage for<br>
         </br> Every Special Item</h2>
 </div>
 
@@ -22,28 +22,29 @@ const Services = () => {
 
 
 
-      <div className="services-content">
+      <div className="services-content" role="list">
         <div className="left-boxes">
-          <div className="service-card highlighted">
+          <div className="service-card highlighted" role="listitem" aria-label="Diverse Unit Sizes">
             <h4>Diverse Unit Sizes</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
           </div>
-          <div className="service-card">
+          <div className="service-card" role="listitem" aria-label="Moving Assistance">
             <h4>Moving Assistance</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
           </div>
         </div>
 
         <div className="service-image">
-          <img src={serviceImage} alt="Storage service" />
+          <img src={serviceImage} alt="Illustration av förrådsservice och flyttstöd" />
         </div>
 
         <div className="right-boxes">
-          <div className="service-card">
+          <div className="service-card" role="listitem" aria-label="Vehicle Storage">
+
             <h4>Vehicle Storage</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
           </div>
-          <div className="service-card">
+          <div className="service-card" role="listitem" aria-label="Top-Notch Security">
             <h4>Top-Notch Security</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
           </div>

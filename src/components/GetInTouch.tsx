@@ -13,10 +13,10 @@ const GetInTouch = () => {
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  // 🔹 State för feedback till användaren
+  //  State för feedback till användaren
   const [status, setStatus] = useState("");
 
-  // 🔹 Uppdatera fält
+  //  Uppdatera fält
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -57,7 +57,7 @@ const GetInTouch = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // 🔹 Skicka data med Axios
+  // Skicka data med Axios
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -108,7 +108,7 @@ const GetInTouch = () => {
 
       if (error.response) {
     if (error.response.status === 400) {
-      // 🔸 Hantera 400 Bad Request specifikt
+      //  Hantera 400 Bad Request specifikt
       alert("⚠️ Felaktig begäran — kontrollera att alla fält är ifyllda korrekt.");
     }
    }
@@ -123,7 +123,7 @@ const GetInTouch = () => {
     <div className="get-in-touch-container">
       <div className="get-in-touch-content">
         <div className="left-content">
-          <h4 className="first-title">Get in Touch</h4>
+          <h4 className="first-title-getintouch">Get in Touch</h4>
           <h2 className="second-text">
             Get Personalized Assistance
             <br />

@@ -39,7 +39,7 @@ export default function LatestBlogs() {
       <div className="container">
         <div className="header-row">
           <div>
-            <h4 className="subtitle">Latest Blog and News</h4>
+            <h4 className="subtitle-blogs">Latest Blog and News</h4>
             <h3 className="title">Check Out Our Latest Blog and News Update</h3>
           </div>
 

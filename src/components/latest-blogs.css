@@ -21,11 +21,13 @@
   margin-bottom: 3rem;
 }
 
-.subtitle {
+.subtitle-blogs {
   font-size: 25px;
   font-weight: 600;
   color: #F1C30C;
   margin-bottom: 0.3rem;
+  text-align: start;
+  
 }
 
 .title {
@@ -59,18 +61,19 @@
   display: flex;
   flex-direction: column;
 }
-.blog-card :hover {
+/*.blog-card:hover {
     color: #f2f2ee;
-}
+}*/
 .blog-image {
   width: 100%;
   height: 270px;
   object-fit: cover;
   background-color: #C1C1C1;
-  border: 20px solid #0C3B37;
+  border: 20px solid #0d3f34;
   border-radius: 25px;
   display: block;
 }
+
 
 
 
@@ -154,4 +157,8 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   background-color: #145646; /* lite ljusare grön vid hover */
+}
+.blog-card:hover .blog-image {
+  border-color: #145646; /* ljusare grön ton */
+ 
 }

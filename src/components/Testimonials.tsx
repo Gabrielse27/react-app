@@ -27,7 +27,6 @@ const Testimonials = () => {
 
         const data = await res.json();
 
-        // 🟢 Säkerställ att datan är i rätt format
         const list = Array.isArray(data) ? data : [data];
 
         const formatted = list.map((item: any) => ({
@@ -52,33 +51,43 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="testimonials-section">
+    <section className="testimonials-section" aria-labelledby="testimonials-heading">
       <div className="testimonials-text">
         <p className="testimonials-tag">Testimonials</p>
-        <h2 className="section-title" style={{ color: "#ffffff" }}>
+        <h2 id="testimonials-heading" className="section-title" style={{ color: "#ffffff" }}>
           See What Our Clients Say
         </h2>
         <p className="section-desc">
-          These reviews are loaded live from the Swagger API.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.
         </p>
       </div>
 
+
       {error ? (
-        <p style={{ color: "red", textAlign: "center" }}>{error}</p>
+        <p role="alert" style={{ color: "red", textAlign: "center" }}>{error}</p>
       ) : testimonials.length === 0 ? (
-        <p style={{ textAlign: "center", color: "#ccc" }}>Loading testimonials...</p>
+        <p role="status" style={{ textAlign: "center", color: "#ccc" }}>Loading testimonials...</p>
       ) : (
-        <div className="testimonials-cards">
+
+
+        <div className="testimonials-cards" role="list">
           {testimonials.map((t) => (
-            <div className="testimonial-card" key={t.id}>
-              <div className="stars">{"★".repeat(t.rating)}</div>
+            <div className="testimonial-card" key={t.id}
+            role="listitem" aria-label={`Recension från ${t.author}, ${t.company}`}
+            >
+
+
+              <div className="stars" aria-label={`${t.rating} av 5 stjärnor`}>
+                {"★".repeat(t.rating)}</div>
+
               <p className="testimonial-text">
                 {t.text.length > 140 ? t.text.slice(0, 140) + "..." : t.text}
               </p>
               <div className="testimonial-footer">
                 <img
                   src={t.avatar}
-                  alt={t.author}
+                  alt={`Porträtt av ${t.author}, kund hos ${t.company}`}
+
                   className="avatar"
                   style={{
                     borderRadius: "50%",
@@ -92,7 +101,7 @@ const Testimonials = () => {
                   <strong>{t.author}</strong>
                   <p>{t.company}</p>
                 </div>
-                <span className="quote">❞</span>
+                <span className="quote" aria-hidden="true">❞</span>
               </div>
             </div>
           ))}

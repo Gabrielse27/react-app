@@ -1,15 +1,27 @@
  .testimonials-section {
-  background-color: #0e3c34; /* Mörk grön bakgrund */
-  padding: 80px 20px;
+
+ position: relative;
+ background-image: url('url../../public/photo-background-testim.svg');
+ padding: 80px 20px;
   text-align: center;
-
-
-background-image: url('public/photo-testimo.png');
-    background-size: cover;
+   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 80px 0;
   color: white;
+}
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.70); /* Gör bilden mörkare */
+  z-index: 1;
+}
+
+/* Gör så att allt innehåll (text, kort) ligger ovanför overlayn */
+.testimonials-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .testimonials-tag {
@@ -29,7 +41,7 @@ background-image: url('public/photo-testimo.png');
 }
 
 .section-desc {
-  color: #d1d5db;
+  color: #ffffff;
   font-size: 1rem;
   max-width: 700px;
   margin: 0 auto 50px auto;

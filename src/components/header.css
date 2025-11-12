@@ -11,19 +11,20 @@
 }
 
 .social-icons i {
-  font-size: 1.1rem;
-  width: auto;                /* Ta bort fasta mått som orsakar oval form */
+  font-size: 1.5rem;
+                
   height: auto;
   line-height: normal;
-  border: none;               /* Ta bort eventuell ram */
-  background: none;           /* Ingen bakgrundsfärg bakom ikonen */
-  border-radius: 0;           /* Ingen rund form */
+  border: none;               
+  background: none;          
+  border-radius: 0;           
   color: #fbbf24;   
   display: inline-block;          
   transition: color 0.3s ease, transform 0.3s ease;
-  
 }
-
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
 
 
 
@@ -35,7 +36,7 @@
 
 .nav-link {
   font-size: 20px;
-  color: #440bc9;           
+   color:#12372A !important;   
   display: inline-block;
   transition: color 0.3s ease;
 }
@@ -46,9 +47,7 @@
           
 }
 .nav-item {
-    font-weight: 600;
-    
-    
+    font-weight: 600; 
 }
 .btn-warning.btn-top {
 margin-bottom: 1rem;
@@ -57,10 +56,10 @@ width: 12%;
 
 }
 .btn-warning.btn-top:hover {
-  background-color: #ffdb4d;   
+  background-color: #3de37a;   
   transform: scale(1.05);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  color: #12372A;     
+      
 }
 .active-link {
   color: #f4b400 !important; /* gul när sidan är aktiv */
