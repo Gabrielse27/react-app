@@ -40,6 +40,9 @@
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+.stats-overlay:hover {
+  transform: scale(1.05);
+}
 
 .stats-align {
   display: flex;
@@ -67,9 +70,10 @@
 }
 
 .section-tag {
-  color: #fbbf24;
+  color: #F1C30C;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  font-size: 24px;
 }
 
 .about-title {
@@ -174,6 +178,9 @@
   margin-bottom: 1.7rem;
 }
 .btn-discover-more:hover {
-background-color: #e3b73d;
+background-color: #3de37a;
 transform: scale(1.03);
+}
+.contact-text {
+  text-decoration: none;
 }

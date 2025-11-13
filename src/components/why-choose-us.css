@@ -6,7 +6,9 @@
 .section-title {
   font-size: 2rem;
   color: #12372A;
-  text-align: center;
+  text-align: left;
+  margin-left: 7.2rem;
+  
 }
 
 .section-description {
@@ -14,7 +16,7 @@
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 22px;
   letter-spacing: 0.5px;
   margin-left: 7.6rem;
 }

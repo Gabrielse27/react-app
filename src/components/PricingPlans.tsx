@@ -65,10 +65,10 @@ const plans = [
 
 const PricingPlans = () => {
   return (
-    <section className="pricing-section">
+    <section className="pricing-section" aria-labelledby="pricing-heading">
     
         <p className="price-tag">Pricing Plan</p>
-      <h2 className="pricing-title">Find the Perfect Plan for<br>
+      <h2 id="pricing-heading" className="pricing-title">Find the Perfect Plan for<br>
       </br> Your Storage Needs</h2>
 
       <div className="pricing-container">
@@ -95,14 +95,14 @@ const PricingPlans = () => {
               {plan.features.map((feature, index) => (
                 
                 <li key={index}>
-<i className="bi bi-check-circle-fill me-2"></i>
+<i className="bi bi-check-circle-fill me-2" aria-hidden="true"></i>
                     {feature}
                     </li>
                 
               ))}
               
             </ul>
-            <button className="plan-button">Rent Now</button>
+            <button className="plan-button" aria-label={`Rent the ${plan.title} plan`}>Rent Now</button>
           </div>
         ))}
       </div>

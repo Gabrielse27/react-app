@@ -11,7 +11,7 @@
         <div className="findus-area">
 
        <div className="findus-photo">
-        <img src="src/assets/findusphoto.svg" alt="Find us image"/>
+        <img src="src/assets/findusphoto.svg" alt="Karta som visar var du kan hitta oss"/>
         </div>    
         
 
@@ -33,7 +33,7 @@
               <i className="fa-solid fa-phone"></i>
               <div>
                 <h4>Call Center</h4>
-                <p>+46 8 123 122 44</p>
+                <p><a href="tel:+46812312244" className="contact-link">+46 8 123 122 44</a></p>
               </div> 
             </div>
             </div>
@@ -44,7 +44,7 @@
               <i className="fa-solid fa-envelope"></i>
               <div>
                 <h4>Email Address</h4>
-                <p>contact@domain.com</p>
+                <p><a href="mailto:contact@domain.com" className="contact-link">contact@domain.com</a></p>
               </div>
             </div>
         </div>
@@ -56,7 +56,14 @@
               <i className="fa-solid fa-location-dot"></i>
               <div>
                 <h4>Location</h4>
-                <p>Klarabergsviadukten 90, Stockholm</p>
+                <p><a
+    href="https://www.google.com/maps?q=Klarabergsviadukten+90,+Stockholm"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Öppna adressen Klarabergsviadukten 90, Stockholm i Google Maps"
+    className="location-link">
+                    Klarabergsviadukten 90, Stockholm
+                    </a></p>
               </div>
             </div>
           </div>
@@ -74,9 +81,10 @@
   href="https://www.facebook.com/StorAid"
   target="_blank"
   rel="noopener noreferrer"
+  aria-label="Besök oss på Facebook"
   className="social-link"
 >
-  <i className="fa-brands fa-facebook-f"></i>
+  <i className="fa-brands fa-facebook-f" aria-hidden="true"></i>
 </a>
 
 
@@ -85,7 +93,8 @@
 
               <i className="fa-brands fa-x-twitter"></i>
 
-              <a href="https://www.instagram.com/StorAid" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.instagram.com/StorAid" target="_blank" rel="noopener noreferrer"
+               aria-label="Besök oss på Instagram" className="social-link">
               <i className="fa-brands fa-instagram"></i>
               </a>
 

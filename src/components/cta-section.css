@@ -32,7 +32,7 @@
   text-align: center;
 }
 .cta-button:hover {
-  background-color: #c89a01;
+  background-color: #eee3e3;
   transform: scale(1.05);   
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
 }

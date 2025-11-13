@@ -17,10 +17,18 @@
     list-style: none;
     margin-right: 5rem;
     margin-top: 2rem;
+    
+    
 }
-.findus-image {
-    width: 500px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 4rem;
+
+
+.footer-terms a {
+  color: #ffffff;           /* gör texten vit */
+  text-decoration: none;    /* tar bort underline */
+  font-weight: 400;         
+  transition: color 0.3s ease;
+}
+.footer-terms li svg {
+  margin-right: 6px;   
+  vertical-align: middle; /* gör att ikonen ligger snyggt i linje med texten */
 }

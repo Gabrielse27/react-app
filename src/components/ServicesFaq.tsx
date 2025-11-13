@@ -46,7 +46,7 @@ const ServicesFaq: React.FC = () => {
     return (
       <section className="faq-section">
         <div className="faq-area">
-          <p>Laddar vanliga frågor...</p>
+          <p role="status" aria-live="polite">Laddar vanliga frågor...</p>
         </div>
       </section>
     );
@@ -54,20 +54,20 @@ const ServicesFaq: React.FC = () => {
 
   if (error) {
     return (
-      <section className="faq-section">
+      <section className="faq-section" aria-labelledby="faq-title-section">
         <div className="faq-area">
-          <p style={{ color: "red" }}>Fel: {error}</p>
+          <p role="alert" style={{ color: "red" }}>Fel: {error}</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section className="faq-section">
+    <section className="faq-section" aria-labelledby="faq-title-section">
       <div className="faq-area">
         <div className="faq-content">
           <h4 className="faq-text">FAQs</h4>
-          <h2 className="faq-title">Frequently Asked Questions</h2>
+          <h2 id="faq-title" className="faq-title">Frequently Asked Questions</h2>
           <div className="faq-ingress">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec<br>
@@ -80,11 +80,12 @@ const ServicesFaq: React.FC = () => {
             <div
               key={item.id}
               className={`faq-item ${activeIndex === index ? "active" : ""}`}
-              onClick={() => toggleAccordion(index)}
+              onClick={() => toggleAccordion(index)} aria-expanded={activeIndex === index}
+  aria-controls={`faq-answer-${item.id}`}
             >
               <div className="faq-question">
                 <p>{item.title}</p>
-                <span className="faq-icon">
+                <span className="faq-icon" aria-hidden="true">
                   {activeIndex === index ? (
                     <FaChevronUp />
                   ) : (

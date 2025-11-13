@@ -11,12 +11,20 @@ const Header = () => {
   return (
     <header>
 
-<div className="topbar-bg text-white py-2">
+<div className="topbar-bg text-white py-2" role="contentinfo" aria-label="Kontaktinformation och sociala länkar">
         <div className="container d-flex justify-content-between align-items-center small">
           <div>
-            <i className="bi bi-telephone-fill me-2"></i> +46 8 123 122 
+            
+            <a href="tel:+46 8 123 122 44" className="phone-link">
+            <i className="bi bi-telephone-fill me-2"></i> +46 8 123 122 44 
+            </a>
+
             <span className="mx-3">|</span>
+
+            <a href="mailto:contact@domain.com" className="email-link">
             <i className="bi bi-envelope-fill me-2"></i> contact@domain.com
+            </a>
+
           </div>
           <div className="d-flex gap-4 social-icons">
 
@@ -32,16 +40,16 @@ const Header = () => {
 
   
 
-            <a href="https://www.twitter.com/StorAid" target="blank"rel="noopener noreferrer"
+            <a href="https://www.twitter.com/StorAid" target="_blank"rel="noopener noreferrer"
             className="social-icon-link" aria-label="Följ StorAid på Twitter"><i className="bi bi-twitter" aria-hidden="true"></i>
             </a>
 
 
-            <a href="https://www.instagram.com/StorAid" target="blank"rel="noopener noreferrer"
+            <a href="https://www.instagram.com/StorAid" target="_blank"rel="noopener noreferrer"
              className="social-icon-link" aria-label="Följ StorAid på Instagram"><i className="bi bi-instagram" aria-hidden="true"></i></a>
 
 
-            <a href="https://www.youtube.com/StorAid" target="blank"rel="noopener noreferrer"
+            <a href="https://www.youtube.com/StorAid" target="_blank"rel="noopener noreferrer"
              className="social-icon-link" aria-label="Följ StorAid på YouTube"><i className="bi bi-youtube" aria-hidden="true"></i></a>
 
             
@@ -54,10 +62,11 @@ const Header = () => {
 
 
 
-      <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+      <nav className="navbar navbar-expand-lg bg-white shadow-sm" role="navigation" aria-label="Huvudnavigering">
+
         <div className="container">
           <Link className="navbar-brand" to="/home">
-  <img src={logo} alt="StorAid Logo" height="40" />
+  <img src={logo} alt="StorAid Logo" height="50" />
           </Link>
           <button
             className="navbar-toggler"
@@ -80,7 +89,7 @@ const Header = () => {
               <li className="nav-item">
 
                 <NavLink
-                 to="/home"
+  to="/home"
   className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link")}
                 >
                 Home

@@ -5,15 +5,15 @@ const WhyChooseUs = () => {
   return (
 
  
- <section className="why-choose-us py-5">
+ <section className="why-choose-us py-5" aria-labelledby="why-choose-heading">
   <div className="container">
     <div className="row align-items-start ml-5">
 
       {/* Vänsterkolumn: Titel + Ikoner */}
       <div className="col-lg-6">
         <p className="subtitle text-warning fw-bold">Why Choose Us</p>
-        <h2 className="section-title fw-bold mb-4">
-          Choose Us for Exceptional <br />
+        <h2 id="why-choose-heading" className="section-title fw-bold mb-4">
+          Choose Us for Exceptional<br />
           Storage Solutions
         </h2>
 
