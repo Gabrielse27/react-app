@@ -148,22 +148,12 @@ flex-direction: column;
 }
 
 
-
-
-/*.input-field .error {
-  min-height: 1px; /* hållerr plats för felmeddelandet */
-  /*color: #d93025;
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  
-}   */
-
 .small-inputs .input-field {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 136px; /* 🔹 samma höjd för båda kolumnerna */
+  min-height: 134px; /* 🔹 samma höjd för båda kolumnerna */
 }
 
 .input-field .error {

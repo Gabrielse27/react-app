@@ -6,7 +6,9 @@
 .section-title {
   font-size: 2rem;
   color: #12372A;
-  text-align: center;
+  text-align: left;
+  margin-left: 7.2rem;
+  
 }
 
 .section-description {

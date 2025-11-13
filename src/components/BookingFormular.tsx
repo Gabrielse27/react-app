@@ -64,12 +64,12 @@ try {
   };
 
   return (
-    <div className="booking-container">
+    <div className="booking-container" aria-labelledby="booking-title">
       <div className="booking-content">
         <div className="left-content">
           <div className="text-title-left">
             <h4 className="first-title">Booking Unit</h4>
-            <h2 className="second-text">
+            <h2 id="booking-title" className="second-text">
               Booking Your Storage Unit Now
               <br /> & Simplify Your Life!
             </h2>
@@ -102,13 +102,14 @@ try {
                   Your Name <span className="required">*</span>
                 </label>
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
                 />
-                {errors.name && <p className="error">{errors.name}</p>}
+                {errors.name && <p className="error" aria-live="assertive">{errors.name}</p>}
               </div>
 
               <div className="input-field">
@@ -116,13 +117,14 @@ try {
                   Email <span className="required">*</span>
                 </label>
                 <input
+                 id="email"
                   type="email"
                   name="email"
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
                 />
-                {errors.email && <p className="error">{errors.email}</p>}
+                {errors.email && <p className="error" aria-live="assertive">{errors.email}</p>}
               </div>
             </div>
           </div>
@@ -132,13 +134,14 @@ try {
               Choose Unit <span className="required">*</span>
             </label>
             <input
+              id="unit"
               type="text"
               name="unit"
               placeholder="Choose Unit"
               value={formData.unit}
               onChange={handleChange}
             />
-            {errors.unit && <p className="error">{errors.unit}</p>}
+            {errors.unit && <p className="error" aria-live="assertive">{errors.unit}</p>}
           </div>
 
           <div className="input-field">
@@ -146,15 +149,16 @@ try {
               Storage Purpose <span className="required">*</span>
             </label>
             <textarea
+              id="purpose"
               name="purpose"
               placeholder="Describe your Storage purpose"
               value={formData.purpose}
               onChange={handleChange}
             ></textarea>
-            {errors.purpose && <p className="error">{errors.purpose}</p>}
+            {errors.purpose && <p className="error" aria-live="assertive">{errors.purpose}</p>}
           </div>
 
-          <button type="submit">Book Unit</button>
+          <button type="submit" aria-label="Submit booking form">Book Unit</button>
         </form>
       </div>
     </div>

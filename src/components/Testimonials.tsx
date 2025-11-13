@@ -54,8 +54,8 @@ const Testimonials = () => {
     <section className="testimonials-section" aria-labelledby="testimonials-heading">
       <div className="testimonials-text">
         <p className="testimonials-tag">Testimonials</p>
-        <h2 id="testimonials-heading" className="section-title" style={{ color: "#ffffff" }}>
-          See What Our Clients Say
+        <h2 id="testimonials-heading" className="section-title-testim">
+          See What Our Clients Have To Say
         </h2>
         <p className="section-desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.

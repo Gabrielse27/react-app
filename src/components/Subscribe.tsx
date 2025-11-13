@@ -51,7 +51,7 @@ export default function SubscribeSection() {
 
     setLoading(false);
 
-    setMessage("✅ Thank you for subscribing! 🎉");
+    setMessage("✅ Thank you for subscribing!");
     setEmail(""); // töm fältet efter submit
 
     setTimeout(() => {

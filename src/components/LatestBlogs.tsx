@@ -35,12 +35,12 @@ export default function LatestBlogs() {
   }, []);
 
   return (
-    <section className="latest-blogs">
+    <section className="latest-blogs" aria-labelledby="blogs-heading">
       <div className="container">
         <div className="header-row">
           <div>
             <h4 className="subtitle-blogs">Latest Blog and News</h4>
-            <h3 className="title">Check Out Our Latest Blog and News Update</h3>
+            <h3 id="blogs-heading" className="title">Check Out Our Latest Blog and News Update</h3>
           </div>
 
           <p className="intro-text">
@@ -51,13 +51,13 @@ export default function LatestBlogs() {
         </div>
 
         {error ? (
-          <p style={{ color: "red", textAlign: "center" }}>{error}</p>
+          <p role="alert" style={{ color: "red", textAlign: "center" }}>{error}</p>
         ) : blogs.length === 0 ? (
-          <p style={{ textAlign: "center", color: "#12372A" }}>Loading blogs...</p>
+          <p role="status" style={{ textAlign: "center", color: "#12372A" }}>Loading blogs...</p>
         ) : (
           <div className="blogs-grid">
             {blogs.slice(0, 3).map((blog) => (
-              <div className="blog-card" key={blog.id}>
+              <div className="blog-card" key={blog.id} aria-label={`Blogg: ${blog.title}`}>
                 <img
                   className="blog-image"
                   src={blog.imageUrl}
@@ -73,7 +73,8 @@ export default function LatestBlogs() {
                     <img
                       className="date-icon"
                       src="src/assets/Icon-calendar.png"
-                      alt="date-icon"
+                      alt=""
+                      aria-hidden="true"
                     />
                     {new Date(blog.created).toLocaleDateString("sv-SE", {
                       year: "numeric",
@@ -90,7 +91,7 @@ export default function LatestBlogs() {
                       : blog.description}
                   </p>
 
-                  <a className="read-more" href="#">
+                  <a className="read-more" href={`/blog/${blog.id}`} aria-label={`Read full blog post: ${blog.title}`}>
                     Read more →
                   </a>
                 </div>

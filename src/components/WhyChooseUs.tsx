@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
       <div className="col-lg-6">
         <p className="subtitle text-warning fw-bold">Why Choose Us</p>
         <h2 id="why-choose-heading" className="section-title fw-bold mb-4">
-          Choose Us for Exceptional <br />
+          Choose Us for Exceptional<br />
           Storage Solutions
         </h2>
 

@@ -14,11 +14,17 @@ const Header = () => {
 <div className="topbar-bg text-white py-2" role="contentinfo" aria-label="Kontaktinformation och sociala länkar">
         <div className="container d-flex justify-content-between align-items-center small">
           <div>
+            
+            <a href="tel:+46 8 123 122 44" className="phone-link">
             <i className="bi bi-telephone-fill me-2"></i> +46 8 123 122 44 
-
+            </a>
 
             <span className="mx-3">|</span>
+
+            <a href="mailto:contact@domain.com" className="email-link">
             <i className="bi bi-envelope-fill me-2"></i> contact@domain.com
+            </a>
+
           </div>
           <div className="d-flex gap-4 social-icons">
 

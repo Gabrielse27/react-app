@@ -120,10 +120,10 @@ const GetInTouch = () => {
 
 
   return (
-    <div className="get-in-touch-container">
+    <div className="get-in-touch-container" aria-labelledby="getintouch-heading">
       <div className="get-in-touch-content">
         <div className="left-content">
-          <h4 className="first-title-getintouch">Get in Touch</h4>
+          <h4 id="getintouch-heading" className="first-title-getintouch">Get in Touch</h4>
           <h2 className="second-text">
             Get Personalized Assistance
             <br />
@@ -147,19 +147,22 @@ const GetInTouch = () => {
         </div>
       </div>
 
-      <form className="get-in-touch-form" onSubmit={handleSubmit}>
+      <form className="get-in-touch-form" onSubmit={handleSubmit} noValidate>
 
 
 <div className="form-group">
           <label>
-            Your Name<span className="required">*</span>
+            Your Name<span aria-hidden="true" className="required">*</span>
           </label>
           <input
+            id="name"
             type="text"
             name="name"
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
+            required
+            aria-required="true"
           />
           {errors.name && <p className="error">{errors.name}</p>}
         </div>
@@ -169,7 +172,7 @@ const GetInTouch = () => {
 
             <div className="input-field">
               <label>
-                Email<span className="required">*</span>
+                Email<span aria-hidden="true" className="required">*</span>
               </label>
               <input
                 type="email"
@@ -177,17 +180,15 @@ const GetInTouch = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
+                required
+                aria-required="true"
               />
-              {errors.email && <p className="error">{errors.email}</p>}
-
- 
+              {errors.email && <p role="alert" aria-live="assertive" className="error">{errors.email}</p>}
             </div>
-
-            
 
             <div className="input-field">
               <label>
-                Telephone<span className="required"></span>
+                Telephone<span aria-hidden="true"className="required"></span>
               </label>
               <input
                 type="tel"
@@ -195,8 +196,10 @@ const GetInTouch = () => {
                 placeholder="Telephone"
                 value={formData.phone}
                 onChange={handleChange}
+                required
+                aria-required="true"
               />
-              {errors.phone && <p className="error">{errors.phone}</p>}
+              {errors.phone && <p role="alert" aria-live="assertive" className="error">{errors.phone}</p>}
 
 
             </div>
@@ -208,7 +211,7 @@ const GetInTouch = () => {
 
         <div className="input-field">
           <label>
-            Subject<span className="required">*</span>
+            Subject<span aria-hidden="true" className="required">*</span>
           </label>
           <input
             type="text"
@@ -216,27 +219,33 @@ const GetInTouch = () => {
             placeholder="How can we help you!"
             value={formData.subject}
             onChange={handleChange}
+            required
+            aria-required="true"
           />
-          {errors.subject && <p className="error">{errors.subject}</p>}
+          {errors.subject && <p role="alert" aria-live="assertive" className="error">{errors.subject}</p>}
         </div>
 
         <div className="input-field">
           <label>
-            Comments / Questions <span className="required">*</span>
+            Comments / Questions <span aria-hidden="true"className="required">*</span>
           </label>
           <textarea
             name="message"
             placeholder="Comments"
             value={formData.message}
             onChange={handleChange}
+            required
+            aria-required="true"
           ></textarea>
-          {errors.message && <p className="error">{errors.message}</p>}
+          {errors.message && <p role="alert" aria-live="assertive" className="error">{errors.message}</p>}
         </div>
 
-        <button type="submit">Submit</button>
+        <button id="submit-btn" type="submit" 
+        aria-label="Skicka formuläret">Submit</button>
       </form>
     </div>
   );
 };
 
 export default GetInTouch;
+ 

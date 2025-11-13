@@ -9,9 +9,9 @@
  return (
  
  
- <section className="servicebanner-section">
+ <section className="servicebanner-section" aria-labelledby="servicebanner-title">
  
-     <h1 className="servicebanner-title">Services</h1>
+     <h1 id="servicebanner-title" className="servicebanner-title">Services</h1>
  
      <p className="servicebanner-tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec<br>
  

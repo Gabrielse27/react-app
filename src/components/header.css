@@ -65,3 +65,17 @@ width: 12%;
   color: #f4b400 !important; /* gul när sidan är aktiv */
   font-weight: 600;
 }
+.phone-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+.email-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+.phone-link:hover {
+    color:#f7b205
+}
+.email-link:hover {
+    color: #f7b205;
+}
