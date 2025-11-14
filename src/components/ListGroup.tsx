@@ -1,3 +1,3 @@
 export default function ListGroup() {
-  return <></>;
+  return <div></div>;
 }
