@@ -1,5 +1,5 @@
  import React from "react";
- import {FaChevronRight} from "react-icons/fa6";
+ import {FaChevronRight} from "react-icons/fa";
 import "./footer.css"; 
 
 const Footer = () => {
