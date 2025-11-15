@@ -11,13 +11,13 @@ const Footer = () => {
 
         <ul className="footer-terms">
 
-            <li><FaChevronCircleRight aria-hidden="true"/> 
+            <li><FaChevronCircleRight aria-hidden ="true"/> 
             <a href="/true" aria-label="Read our Terms and Conditions">
             Terms & Conditions</a>
             </li>
 
 
-            <li><FaChevronCircleRight aria-hidden="true"/> 
+            <li><FaChevronCircleRight aria-hidden ="true"/> 
             <a href="/policy" aria-label="Read Privacy Policy Conditions">
             Privacy Policy</a>
             </li>
