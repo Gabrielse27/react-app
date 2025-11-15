@@ -1,4 +1,5 @@
  import React from 'react';
+ import securityIcon from "../assets/security-icon.svg";
 import './why-choose-us.css';
 
 const WhyChooseUs = () => {
@@ -22,7 +23,7 @@ const WhyChooseUs = () => {
 
         <div className="feature d-flex align-items-start mb-4">
               <div className="security-icon me-4">
-              <img  src ="src/assets/security-icon.svg"  alt="security icon" width={45}/>
+              <img  src ={securityIcon}  alt="security icon" width={45}/>
                 </div>
               <div>
                 <h5 className="mb-1 security" >Security and Safety</h5>
