@@ -1,5 +1,5 @@
  import React from "react";
- import { FaChevronRight } from "react-icons/fa6";
+ import { FaChevronCircleRight } from "react-icons/fa";
 import "./footer.css"; 
 
 const Footer = () => {
@@ -11,13 +11,13 @@ const Footer = () => {
 
         <ul className="footer-terms">
 
-            <li><FaChevronRight aria-hidden="true"/> 
+            <li><FaChevronCircleRight aria-hidden="true"/> 
             <a href="/true" aria-label="Read our Terms and Conditions">
             Terms & Conditions</a>
             </li>
 
 
-            <li><FaChevronRight aria-hidden="true"/> 
+            <li><FaChevronCircleRight aria-hidden="true"/> 
             <a href="/policy" aria-label="Read Privacy Policy Conditions">
             Privacy Policy</a>
             </li>
