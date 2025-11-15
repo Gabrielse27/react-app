@@ -1,5 +1,6 @@
  import React from 'react';
  import securityIcon from "../assets/security-icon.svg";
+ import flexibleIcon from "../assets/flexible-icon.svg";
 import './why-choose-us.css';
 
 const WhyChooseUs = () => {
@@ -35,7 +36,7 @@ const WhyChooseUs = () => {
 
             <div className="feature d-flex align-items-start mb-4">
               <div className="flexible-icon me-3">
-                <img src="src/assets/flexible-icon.svg" alt="flexible icon" width={45}/>
+                <img src={flexibleIcon} alt="flexible icon" width={45}/>
               </div>
               <div>
 
