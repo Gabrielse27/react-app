@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import logo from "../assets/logo-storaid.svg";
+import logo from "../assets/storaid-logo.svg";
 import { Link, NavLink } from "react-router-dom";
 
 
