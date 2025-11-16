@@ -1,6 +1,9 @@
  import React from 'react';
  import securityIcon from "../assets/security-icon.svg";
  import flexibleIcon from "../assets/flexible-icon.svg";
+ import cleanIcon from "../assets/clean-icon.svg";
+ import accessIcon from "../assets/access-icon.svg";
+ import whychooseImg from "../assets/whychoose.svg";
 import './why-choose-us.css';
 
 const WhyChooseUs = () => {
@@ -49,7 +52,7 @@ const WhyChooseUs = () => {
 
             <div className="feature d-flex align-items-start mb-4">
               <div className="clean-icon">
-                <img src="src/assets/clean-icon.svg" alt="clean icon" width={45}/>
+                <img src={cleanIcon} alt="clean icon" width={45}/>
               </div>
               <div>
       <div className="ms-4">
@@ -63,7 +66,7 @@ const WhyChooseUs = () => {
 
             <div className="feature d-flex align-items-start">
               <div className="access-icon">
-                <img src="src/assets/access-icon.svg" alt="access icon" width={45}/>
+                <img src={accessIcon} alt="access icon" width={45}/>
               </div>
               <div>
 
@@ -88,7 +91,7 @@ const WhyChooseUs = () => {
 
         {/* Bild */}
         <div className="image">
-        <img src="src/assets/whychoose.svg" alt="Storage" className="img-fluid rounded shadow" />
+        <img src={whychooseImg} alt="Storage" className="img-fluid rounded shadow" />
       </div>
     </div>
     </div>
