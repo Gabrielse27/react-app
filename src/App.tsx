@@ -30,6 +30,7 @@ function App() {
       <Route path="/booking" element={<Booking />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/booking" element={<BookingFormular />} />
+      <Route path="/" element={<Home/>} />
       
      </Routes>
      </main> 

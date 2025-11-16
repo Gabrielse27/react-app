@@ -16,7 +16,7 @@ const BookingFormular = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    setErrors({ ...errors, [name]: "" }); // tar bort felmeddelandet vid ny inmatning
+    setErrors({ ...errors, [name]: "" }); 
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

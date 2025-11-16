@@ -1,5 +1,7 @@
  import React from 'react';
+ import heroImage from "../assets/bild-hero.svg";
 import { useNavigate } from "react-router-dom";
+
 
 import './Hero.css';
  
@@ -31,7 +33,7 @@ const handleDiscoverClick = () => {
 
 
         <div className="hero-image">
-            <img src="src/assets/bild-hero.svg" alt="Illustration av en förrådsanläggning med lagringslådor och människor"/>
+            <img src={heroImage} alt="Illustration av en förrådsanläggning med lagringslådor och människor"/>
           {/* tom om vi använder CSS-bakgrund */}
         </div>
       </div>
